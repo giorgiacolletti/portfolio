@@ -516,6 +516,7 @@ section {
 
 .floating-badge.badge-1 { top: 8%; right: 4%; }
 .floating-badge.badge-2 { bottom: 14%; left: -4%; animation-delay: 1.2s; }
+.floating-badge.badge-3 { top: 22%; left: -6%; animation-delay: 0.6s; }
 
 .floating-badge .badge-icon {
   display: grid;
@@ -535,6 +536,10 @@ section {
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; }
   .hero-visual { height: 420px; margin-top: 24px; }
+}
+
+@media (max-width: 640px) {
+  .floating-badge.badge-3 { display: none; }
 }
 
 @media (max-width: 520px) {
