@@ -330,6 +330,9 @@ section {
 
 .nav-links a:hover::after { transform: scaleX(1); }
 
+.nav-links a.is-active { color: var(--color-ink); }
+.nav-links a.is-active::after { transform: scaleX(1); }
+
 .nav-actions { display: flex; align-items: center; gap: 20px; }
 
 .nav-toggle {
@@ -380,9 +383,6 @@ section {
     pointer-events: auto;
   }
   .nav-links a { width: 100%; padding: 14px 4px; font-size: 1.05rem; border-bottom: 1px solid var(--color-border); }
-  .nav-actions .btn-primary { display: none; }
-  .nav-links.is-open ~ .nav-actions .btn-primary,
-  .nav-links .nav-cta-mobile { display: inline-flex; }
   .nav-toggle { display: flex; }
 }
 
