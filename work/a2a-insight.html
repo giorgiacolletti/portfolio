@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A2A Insight App — Case Study | Giorgia Colletti</title>
+<meta name="description" content="The mobile companion to FTV Monitoring — a scoped app for A2A clients and maintenance technicians.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="../index.html#home" class="logo">Giorgia Colletti</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#process">Process</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Let's Connect</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="case-hero">
+    <div class="container">
+      <a href="../index.html#work" class="back-link">← Back to Work</a>
+      <div class="case-tags"><span>Mobile App</span><span>Energy</span><span>PwC</span><span>2025</span></div>
+      <h1>A2A Insight — the mobile side of FTV Monitoring</h1>
+      <p class="case-subtitle">
+        A scoped-down mobile experience for clients and maintenance technicians, designed alongside
+        the FTV Monitoring web platform so both share the same profiling logic and data model.
+      </p>
+      <div class="case-meta-row">
+        <div><span class="label">Role</span><span class="value">Design Lead (PwC)</span></div>
+        <div><span class="label">Client</span><span class="value">A2A — Calore e Servizi</span></div>
+        <div><span class="label">Platform</span><span class="value">Mobile (iOS &amp; Android)</span></div>
+        <div><span class="label">Related</span><span class="value"><a href="a2a-ftv-monitoring.html">FTV Monitoring →</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="case-hero-image reveal">
+      <img src="../assets/img/a2a-insight-app.png" alt="A2A Insight app — PIN-based login screen">
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="case-block reveal">
+        <h2>Why a separate mobile experience</h2>
+        <p>
+          FTV Monitoring's brief called for more than a web dashboard: ACS specifically wanted "an
+          app that shows widgets with alerts" so plant status could be checked on the go, not just from
+          a desk. Rather than shrink the entire web Control Room onto a phone screen, the app was
+          scoped from the start around the two audiences who'd realistically use it in the field:
+          clients and maintenance technicians.
+        </p>
+        <p>
+          Admin and Backoffice users manage the full plant estate and need the detail of the web
+          platform; that workflow stays on desktop. The mobile app exists for people who need a fast,
+          secure check-in — not a full control room in their pocket.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block alt-bg reveal">
+        <h2>Design decisions</h2>
+        <h3>PIN-based access, not a full login form</h3>
+        <p>
+          The screen shown above is the app's access flow: after installing, the user authenticates
+          once with their A2A credentials, then unlocks the app on return visits with a short PIN —
+          quicker for a technician checking an alert between site visits than re-entering full
+          credentials every time.
+        </p>
+        <h3>Same profiling, smaller surface</h3>
+        <p>
+          The app reuses the web platform's four-tier profiling (Admin, Backoffice, Manutentore,
+          Cliente) so permissions stay consistent across devices, but only exposes the subset of
+          screens relevant to Cliente and Manutentore — plant overview, real-time KPIs, alarms and
+          document access — deferring anything administrative to desktop.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block reveal">
+        <h2>Outcome</h2>
+        <div class="outcome-block">
+          — Adoption and usage data for the app aren't in the material I have on file — ask Giorgia
+          directly if you need current numbers. —
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="case-nav">
+      <a href="a2a-ftv-monitoring.html">← FTV Monitoring</a>
+      <a href="unes-loyalty.html">Unes Loyalty App →</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Giorgia Colletti. All rights reserved.</span>
+    <span>Product &amp; UX/UI Designer — Milan, Italy</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
