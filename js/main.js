@@ -50,27 +50,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Scroll-spy: underline the nav link matching the section in view
+  // Scroll-spy: underline the nav link for whichever section we've scrolled into.
+  // Uses live offsetTop comparisons (not IntersectionObserver) so it keeps working
+  // regardless of section height or images shifting layout after load.
   const navAnchors = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
   const spySections = Array.from(new Set(navAnchors.map((a) => a.getAttribute('href').slice(1))))
     .map((id) => document.getElementById(id))
     .filter(Boolean);
 
-  if ('IntersectionObserver' in window && spySections.length) {
-    const spyObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            navAnchors.forEach((a) => {
-              a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`);
-            });
-          }
-        });
-      },
-      { rootMargin: '-40% 0px -50% 0px', threshold: 0 }
-    );
-    spySections.forEach((section) => spyObserver.observe(section));
+  if (spySections.length) {
+    const navOffset = 120;
+
+    const updateActiveNav = () => {
+      const scrollPos = window.scrollY + navOffset;
+      let currentId = null;
+      let maxTop = -Infinity;
+      spySections.forEach((section) => {
+        if (section.offsetTop <= scrollPos && section.offsetTop > maxTop) {
+          maxTop = section.offsetTop;
+          currentId = section.id;
+        }
+      });
+      navAnchors.forEach((a) => {
+        a.classList.toggle('is-active', currentId !== null && a.getAttribute('href') === `#${currentId}`);
+      });
+    };
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    window.addEventListener('resize', updateActiveNav);
+    window.addEventListener('load', updateActiveNav);
+    updateActiveNav();
   }
 
   // Scroll-reveal animations
