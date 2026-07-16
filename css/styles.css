@@ -1169,3 +1169,72 @@ footer {
 }
 
 .case-nav a:hover { color: var(--color-primary-dark); }
+
+.case-block-lead {
+  color: var(--color-ink-soft);
+  font-size: var(--fs-body-lg);
+  max-width: 700px;
+  margin-bottom: 32px;
+}
+
+.ds-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.ds-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: ds-card-in 600ms var(--ease) forwards;
+  animation-play-state: paused;
+}
+
+.reveal.is-visible .ds-card { animation-play-state: running; }
+
+.ds-card:nth-child(1) { animation-delay: 60ms; }
+.ds-card:nth-child(2) { animation-delay: 180ms; }
+.ds-card:nth-child(3) { animation-delay: 300ms; }
+.ds-card:nth-child(4) { animation-delay: 420ms; }
+
+@keyframes ds-card-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ds-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 24px;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.ds-card:hover .ds-card-image {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.ds-card-image img {
+  max-width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+}
+
+.ds-caption {
+  text-align: center;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-card { animation: none; opacity: 1; transform: none; }
+}
