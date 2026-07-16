@@ -1129,6 +1129,7 @@ footer {
   grid-template-columns: 32px 1fr;
   gap: 20px;
   padding-bottom: 28px;
+  min-height: 105px;
   position: relative;
 }
 
