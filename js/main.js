@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reportValidity();
         return;
       }
-      formNote.textContent = 'This form isn’t connected to anything yet — hook it up to Formspree/EmailJS/a serverless endpoint to actually receive messages.';
+      formNote.textContent = 'This form isn’t connected to anything yet. Hook it up to Formspree, EmailJS or a serverless endpoint to actually receive messages.';
       formNote.style.color = 'var(--color-primary-dark)';
       formNote.style.fontWeight = '600';
     });
