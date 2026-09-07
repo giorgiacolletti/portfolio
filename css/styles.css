@@ -842,6 +842,21 @@ section {
   padding: 64px;
 }
 
+.contact-grid.is-single {
+  grid-template-columns: 1fr;
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.contact-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
 .contact-info h2 { font-size: var(--fs-h2); margin-bottom: 16px; }
 .contact-info p { color: var(--color-ink-soft); margin-bottom: 32px; }
 

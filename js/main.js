@@ -101,19 +101,4 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
 
-  // Contact form — no backend wired yet, this is a placeholder handler
-  const form = document.getElementById('contactForm');
-  const formNote = document.getElementById('formNote');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-      formNote.textContent = 'This form isn’t connected to anything yet. Hook it up to Formspree, EmailJS or a serverless endpoint to actually receive messages.';
-      formNote.style.color = 'var(--color-primary-dark)';
-      formNote.style.fontWeight = '600';
-    });
-  }
 });
