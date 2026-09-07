@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVA Ops: Case Study | Giorgia Colletti</title>
+<meta name="description" content="A concept redesign of a B2B SaaS platform's daily revenue audit workflow, turning an AI data dump into a trustworthy command center.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="../index.html#home" class="logo">Giorgia Colletti</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#process">Process</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Let's Connect</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="case-hero">
+    <div class="container">
+      <a href="../index.html#work" class="back-link">← Back to Work</a>
+      <div class="case-tags"><span>Product Design</span><span>AI/UX</span><span>Concept Project</span><span>2026</span></div>
+      <h1>NOVA Ops: From Data Dump to Agentic Command Center</h1>
+      <p class="case-subtitle">
+        A concept redesign of a B2B SaaS platform's Daily Revenue Audit workflow: turning an
+        overwhelming data dump into an AI-assisted command center a festival operations director
+        can actually trust, then using that trust as the precondition for product-led growth.
+      </p>
+      <div class="case-meta-row">
+        <div><span class="label">Role</span><span class="value">Product Designer</span></div>
+        <div><span class="label">Type</span><span class="value">Concept project</span></div>
+        <div><span class="label">Platform</span><span class="value">Web (Tablet) &amp; Mobile</span></div>
+        <div><span class="label">Status</span><span class="value">Concept, not shipped</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="case-hero-image is-device-demo reveal">
+      <img src="../assets/img/nova-command-center.png" alt="NOVA Ops Command Center screen showing three prioritized alerts sorted by severity and today's estimated loss of €7,900">
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="case-block reveal">
+        <h2>The challenge</h2>
+        <p>
+          NOVA Ops is a concept project: a hypothetical B2B SaaS platform for companies running
+          mega-festivals, think Tomorrowland or Coachella-scale events. An AI engine reads
+          operational data, RFID wristband pings, POS transactions, attendance maps, to find where
+          a festival is losing economic value. The Daily Revenue Audit, the workflow redesigned
+          here, is just one module in a larger platform; others, like Predictive Weather Analytics
+          and Crowd Surge Management, are sold separately, which is why product-led growth toward
+          those modules makes sense: the customer has already bought a piece of the platform.
+        </p>
+        <p>
+          The brief: an MVP is already live, multiple customers are onboarded, and they have given
+          negative feedback. The underlying AI engine works, the interface doesn't. To prove its
+          value, the interface tries to show the user everything, producing exactly the kind of
+          context overload that erodes trust instead of building it. Because the UI is cluttered,
+          users don't trust the AI's recommendations, and with that trust, the upsell insights the
+          product depends on are lost too.
+        </p>
+
+        <h3>What the redesign needed to achieve</h3>
+        <ul>
+          <li>Make the AI's recommendations trustworthy enough to act on during a live event</li>
+          <li>Replace a raw data dump with a synthesis the user can judge in seconds</li>
+          <li>Introduce a concrete, explainable AI-proposed action; today the product is still manual</li>
+          <li>Prove the value of AI recommendations over time, to justify cross-selling other modules</li>
+          <li>Do it without a single intrusive upsell banner</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block alt-bg reveal">
+        <h2>Who it's for</h2>
+        <div class="role-grid">
+          <div class="role-card">
+            <h4>Global Festival Operations Director (primary persona)</h4>
+            <p>Manages multiple huge events simultaneously across regions, hands-on, with very
+            little time available during a live event. Balances three often-conflicting
+            priorities: crowd safety (non-negotiable), artist scheduling (rigid contracts) and
+            VIP/concession revenue (what he's measured on). Any AI recommendation has to be
+            justifiable to his own leadership, trusting it himself isn't enough.</p>
+          </div>
+          <div class="role-card">
+            <h4>Key Account Managers</h4>
+            <p>Never touch the tool directly, but collect negative customer feedback, the way the
+            company currently measures whether the redesign is working.</p>
+          </div>
+          <div class="role-card">
+            <h4>Festival / promoter leadership</h4>
+            <p>Recipient of the executive reporting, most likely sees only the final summary,
+            never the tool itself.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block reveal">
+        <h2>The legacy workflow</h2>
+        <p>Five steps, five distinct failures, this is the map the redesign started from.</p>
+        <div class="process-timeline">
+          <div class="timeline-step">
+            <div class="timeline-dot">1</div>
+            <div>
+              <h4>Triage → The Data Dump</h4>
+              <p>Logs in to spot the day's revenue leakage. No visual hierarchy: massive data
+              grids force an export to Excel just to find where value is being lost.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">2</div>
+            <div>
+              <h4>Root cause analysis → Context Overload</h4>
+              <p>Spots a spike in unsold merchandise and clicks to investigate. The AI tries to
+              explain itself by showing everything: RFID pings, heat-map hex codes, every POS
+              line, instead of a synthesis.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">3</div>
+            <div>
+              <h4>Fixing the problem → Manual Friction</h4>
+              <p>Wants to quickly prevent this bottleneck going forward, but has to leave the
+              dashboard, dig into a settings menu, and manually write a new pricing or
+              re-routing rule from scratch.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">4</div>
+            <div>
+              <h4>The upsell moment → The Intrusive Ad</h4>
+              <p>Notices money lost to a gap only another module could cover, and gets a generic
+              "Contact Consultant" banner next to the data table, disconnected from the specific
+              numbers.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">5</div>
+            <div>
+              <h4>Executive reporting → Zero Tracking</h4>
+              <p>Has to present the savings achieved to leadership. The system never tracks its
+              own recommendations: screenshots and a hand-built deck, alone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block alt-bg reveal">
+        <h2>The key insight</h2>
+        <h3>Data dump → no trust → no action → no proof of value → upsell lost</h3>
+        <p>
+          AI transparency and trust isn't a requirement parallel to product-led growth, it's its
+          precondition. You can't propose an upsell based on missed savings if the user doesn't
+          already trust the number being shown.
+        </p>
+        <p>
+          Two interpretive calls shaped everything downstream. First, "too much data" is not the
+          root cause: the brief says visual hierarchy is missing, not volume; reading it as too
+          much data would mean hiding data, which risks the explainability the brief requires.
+          Second, "agentic" describes a target state, not today's reality: at the fixing step the
+          user still leaves the dashboard and writes the rule manually, so a concrete AI-proposed
+          action had to be introduced by the redesign, not assumed to already exist.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block reveal">
+        <h2>Two problems, in sequence</h2>
+        <p>Chapter 2 has no material to work with until Chapter 1 is solved: without a
+        recommendation trusted enough to act on, there's nothing to track or use as proof for the
+        upsell.</p>
+        <div class="role-grid">
+          <div class="role-card">
+            <h4>Chapter 1 · Operational trust</h4>
+            <p>The Global Festival Operations Director can't trust the AI's recommendations
+            quickly enough during a live event, because the tool replaces synthesis with a raw
+            dump of all the data, forcing him to redo the analysis himself in Excel while losses
+            accumulate.</p>
+          </div>
+          <div class="role-card">
+            <h4>Chapter 2 · Value proven over time</h4>
+            <p>The Director has no way to demonstrate, over time, that AI-suggested actions
+            reduced losses, because the system doesn't track the outcome of its own
+            recommendations, blocking him from justifying his choices to leadership or perceiving
+            the value of additional modules.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block alt-bg reveal">
+        <h2>How success would be measured</h2>
+        <div class="role-grid">
+          <div class="role-card">
+            <h4>Time to first action</h4>
+            <p>Time between login and the user's first decision on an AI recommendation, approve,
+            modify or reject, directly on the card. Not the first click: the precise boundary
+            between still looking and trusting the number enough to decide.</p>
+          </div>
+          <div class="role-card">
+            <h4>% of flagged anomalies acted on</h4>
+            <p>Directly from the AI's card, without leaving the flow to export data.</p>
+          </div>
+          <div class="role-card">
+            <h4>% of reports auto-generated</h4>
+            <p>Using the tool's automatic reporting feature, instead of a hand-built deck from
+            screenshots.</p>
+          </div>
+          <div class="role-card">
+            <h4>% of missed savings converted</h4>
+            <p>Into purchase or trial of the linked module, tying the product directly to
+            revenue.</p>
+          </div>
+        </div>
+        <p>Ruled out: "time spent in platform." For a tool meant to reduce context overload, more
+        time in-product is a bad signal, not a good one.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block reveal">
+        <h2>From needs to design opportunities</h2>
+        <div class="process-timeline">
+          <div class="timeline-step">
+            <div class="timeline-dot">1</div>
+            <div>
+              <h4>Triage → Management by exception</h4>
+              <p>"Understand right away whether I'm losing money and how serious it is, so I can
+              decide whether to act now or it can wait."</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">2</div>
+            <div>
+              <h4>Root cause → Progressive disclosure</h4>
+              <p>"Quickly understand the most likely cause and how much it weighs, without
+              cross-referencing sources myself."</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">3</div>
+            <div>
+              <h4>Fix → Human-in-the-loop</h4>
+              <p>"Apply a concrete fix, or approve/adjust the AI's proposal, without leaving my
+              workflow to configure it from scratch."</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">4</div>
+            <div>
+              <h4>Upsell moment → PLG on missed savings</h4>
+              <p>"Understand whether a loss is preventable and worth preventing, before deciding,
+              with concrete numbers, not a sales pitch."</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-dot">5</div>
+            <div>
+              <h4>Reporting → Auto-generated report</h4>
+              <p>"Quickly show which recommendations I followed and how much value came from it,
+              without rebuilding everything by hand."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block alt-bg reveal">
+        <h2>Design principles</h2>
+        <div class="role-grid">
+          <div class="role-card">
+            <h4>Management by exception</h4>
+            <p>By default, show only anomalies that deviate from the norm, sorted by economic
+            impact, never the full dataset. Pattern used in monitoring dashboards: NOC,
+            PagerDuty/Datadog, multi-site retail reporting.</p>
+          </div>
+          <div class="role-card">
+            <h4>Progressive disclosure</h4>
+            <p>Every anomaly opens with a readable summary; raw data stays behind an explicit
+            click. Data-viz allowed at first glance, understandable in under a second. Jakob
+            Nielsen, Nielsen Norman Group; Stephen Few, "Information Dashboard Design."</p>
+          </div>
+          <div class="role-card">
+            <h4>Human-in-the-loop for every consequential action</h4>
+            <p>The AI proposes a concrete action with visible reasoning; the user explicitly
+            approves, modifies or rejects. Amershi, Weld, Vorvoreanu et al., "Guidelines for
+            Human-AI Interaction," Microsoft Research, CHI 2019.</p>
+          </div>
+          <div class="role-card">
+            <h4>Always explain the why</h4>
+            <p>Every number, alert or recommendation carries the reason the AI generated it,
+            available but not intrusive: which data, which threshold, which confidence level.
+            Google PAIR, "People + AI Guidebook," Explainability + Trust.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block reveal">
+        <h2>Design &amp; prototype</h2>
+
+        <h3>Command Center: triage in under ten seconds</h3>
+        <p>
+          The legacy screen was a data dump with no visual hierarchy. The Command Center replaces
+          it with a summary band showing today's aggregated impact and active-anomaly count,
+          category filters, and only the exceptions, sorted by economic impact, never an
+          "everything is normal" row. Severity is shown as a left-edge indicator only, never a
+          full-card colour, to avoid a traffic-light effect.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="case-hero-image reveal">
+      <img src="../assets/img/nova-command-center.png" alt="NOVA Ops Command Center with a summary band, category filters and three alert cards sorted by severity">
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="case-block reveal">
+        <h3>The recommendation card: from raw data to a decision</h3>
+        <p>
+          Each anomaly opens into what happened, how much it weighs (today's loss plus a
+          projection), why the AI thinks so (a summary first, the raw comparison behind "see
+          detail"), what it proposes, and Approve / Modify / Reject &amp; request alternative. The
+          proposal states its consequence before approval, for example activating a 15% discount,
+          rather than asking for blind trust.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="case-hero-image reveal">
+      <img src="../assets/img/nova-recommendation-detail.png" alt="Expanded recommendation card showing the AI's analysis, a proposed 15% discount action, a conversion-rate projection chart, and Approve, Modify, Reject controls">
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="case-block reveal">
+        <h3>Product-led growth, without the banner</h3>
+        <p>
+          Instead of a generic "Contact Consultant" ad disconnected from the data, additional
+          modules are surfaced with the same evidence logic as the alerts: real detected episodes,
+          the revenue reachable by activating them, and a discreet "see what's included" link,
+          never a purchase button. The number is meant to grow from real recurring episodes over
+          time, it's the growth of that number that creates the need, not the banner.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="case-hero-image reveal">
+      <img src="../assets/img/nova-opportunities.png" alt="Opportunities screen listing Crowd Surge Management and Predictive Weather Analytics modules, each with detected episodes and reachable revenue">
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="case-block reveal">
+        <h3>Executive reports, auto-generated</h3>
+        <p>
+          The same PLG logic anchors to a ritual the Director already has to do: reporting to
+          leadership. Savings achieved and opportunities not yet captured live in one
+          auto-generated document, so there is finally a record of what the AI recommended and
+          what it was worth, instead of a hand-built deck of screenshots.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="case-hero-image reveal">
+      <img src="../assets/img/nova-executive-report.png" alt="Auto-generated executive report showing total recovered value, a breakdown of confirmed actions, and opportunities not yet captured">
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="case-block alt-bg reveal">
+        <h2>Same logic, everywhere</h2>
+        <p>
+          The Director checks in with just a few minutes before getting back on-site, that's the
+          triage job-to-be-done, and it happens on a phone as often as a desk. The experience
+          adapts across desktop, tablet and mobile without compromising the core experience:
+          tablet for control and deeper analysis, mobile for quick checks and immediate decisions.
+          The mental model stays constant, management-by-exception logic, severity language and
+          card anatomy, even as density changes; mobile isn't a smaller desktop, it's designed
+          around the Director's need to quickly understand what requires attention and why.
+        </p>
+        <div class="ds-gallery" style="margin-top:28px;">
+          <div class="ds-card">
+            <div class="ds-card-image"><img src="../assets/img/nova-mobile-login.png" alt="Mobile login screen for NOVA Ops"></div>
+            <span class="ds-caption">Mobile login</span>
+          </div>
+          <div class="ds-card">
+            <div class="ds-card-image">
+              <video src="../assets/video/nova-demo.mp4" autoplay loop muted playsinline aria-label="Looping demo of the NOVA Ops mobile prototype navigating between screens"></video>
+            </div>
+            <span class="ds-caption">Mobile prototype walkthrough</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block reveal">
+        <h2>Working with AI</h2>
+        <div class="role-grid">
+          <div class="role-card">
+            <h4>Simulated researcher / PM</h4>
+            <p>Used to validate readings of the brief and locate real frameworks instead of
+            inventing principles.</p>
+          </div>
+          <div class="role-card">
+            <h4>Critical sparring partner</h4>
+            <p>Flagged in real time when a need's wording slid toward a solution already in mind,
+            when a root cause was read at the wrong level, or when a proposed metric was product
+            taxonomy rather than a UX measure.</p>
+          </div>
+          <div class="role-card">
+            <h4>Production tool</h4>
+            <p>Built the wireframes directly in Figma from content specs validated line by line,
+            and helped produce the walkthrough deck. Never generated blindly.</p>
+          </div>
+        </div>
+        <h3>What stayed a design decision, explicitly</h3>
+        <ul>
+          <li>Keeping both chapters of the problem, instead of collapsing them into one</li>
+          <li>The human-in-the-loop options, including "partially approve" and "reject &amp;
+          request alternative"</li>
+          <li>Anchoring the PLG mechanism to an existing reporting ritual, instead of a new
+          dedicated section</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="case-block alt-bg reveal">
+        <h2>Outcome</h2>
+        <p>
+          This is a concept project, not a shipped product, so there's no live usage data to
+          report. What it demonstrates instead is a full, defensible reasoning chain: from a
+          business bottleneck, through a workflow audit, to a problem statement with two
+          sequential chapters, success metrics tied to each chapter, and design decisions that
+          trace back to a specific principle and a specific need. Every screen in this case study
+          answers to a principle, every principle answers to a need, and every need traces back to
+          one of the two problems this solves.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="case-nav">
+      <a href="photovoltaic-monitoring-platform.html">← Photovoltaic Monitoring Platform</a>
+      <a href="unes-loyalty.html">Unes Loyalty App →</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Giorgia Colletti. All rights reserved.</span>
+    <span>Product &amp; UX/UI Designer, Milan, Italy</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
