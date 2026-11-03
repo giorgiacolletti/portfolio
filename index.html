@@ -63,12 +63,22 @@
       </div>
 
       <div class="hero-visual reveal">
-        <div class="hero-panel">
-          <figure class="hero-shot hero-shot-nova">
-            <div class="shot-bar"><i></i><i></i><i></i></div>
-            <img src="assets/img/nova-command-center.png" alt="NOVA Ops Command Center screen">
-          </figure>
-          <img class="hero-shot-pv" src="assets/img/photovoltaic-platform-cover.png" alt="Photovoltaic Monitoring Platform on laptop and phone">
+        <div class="hero-panel" id="heroCarousel" aria-roledescription="carousel" aria-label="Selected projects">
+          <a class="hero-slide is-active" href="work/photovoltaic-monitoring-platform.html" aria-label="Photovoltaic Monitoring Platform, view case study">
+            <img class="hero-shot-pv" src="assets/img/photovoltaic-platform-cover.png" alt="Photovoltaic Monitoring Platform on laptop and phone">
+            <span class="hero-slide-label"><strong>Photovoltaic Monitoring Platform</strong> Web &amp; mobile</span>
+          </a>
+          <a class="hero-slide" href="work/nova-ops.html" aria-label="NOVA Ops, view case study">
+            <figure class="hero-shot">
+              <div class="shot-bar"><i></i><i></i><i></i></div>
+              <img src="assets/img/nova-command-center.png" alt="NOVA Ops Command Center screen">
+            </figure>
+            <span class="hero-slide-label"><strong>NOVA Ops</strong> AI/UX concept</span>
+          </a>
+          <div class="hero-dots" role="tablist" aria-label="Choose project">
+            <button type="button" class="is-active" aria-label="Show Photovoltaic Monitoring Platform"></button>
+            <button type="button" aria-label="Show NOVA Ops"></button>
+          </div>
         </div>
       </div>
     </div>

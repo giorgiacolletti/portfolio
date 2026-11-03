@@ -101,4 +101,37 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
 
+
+  // Hero carousel
+  const carousel = document.getElementById('heroCarousel');
+  if (carousel) {
+    const slides = [...carousel.querySelectorAll('.hero-slide')];
+    const dots = [...carousel.querySelectorAll('.hero-dots button')];
+    let current = 0;
+    let timer = null;
+
+    const show = (i) => {
+      current = (i + slides.length) % slides.length;
+      slides.forEach((s, n) => {
+        s.classList.toggle('is-active', n === current);
+        s.tabIndex = n === current ? 0 : -1;
+      });
+      dots.forEach((d, n) => d.classList.toggle('is-active', n === current));
+    };
+
+    const stop = () => { clearInterval(timer); timer = null; };
+    const start = () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      stop();
+      timer = setInterval(() => show(current + 1), 5000);
+    };
+
+    dots.forEach((d, n) => d.addEventListener('click', () => { show(n); start(); }));
+    carousel.addEventListener('mouseenter', stop);
+    carousel.addEventListener('mouseleave', start);
+    carousel.addEventListener('focusin', stop);
+    carousel.addEventListener('focusout', start);
+    show(0);
+    start();
+  }
 });
