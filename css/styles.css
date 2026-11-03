@@ -701,6 +701,8 @@ section {
   letter-spacing: 0.08em;
 }
 
+.process-more { margin-top: 40px; }
+
 .process-step h3 { font-size: 1.1rem; }
 .process-step p { color: var(--color-ink-soft); font-size: var(--fs-sm); }
 
