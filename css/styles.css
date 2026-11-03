@@ -658,7 +658,10 @@ section {
   border-radius: 50%;
   background: var(--color-surface);
   border: 1.5px solid var(--color-border-strong);
-  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
   box-shadow: var(--shadow-sm);
 }
 
