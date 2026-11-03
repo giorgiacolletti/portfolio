@@ -455,12 +455,7 @@ section {
 
 .hero-panel {
   position: relative;
-  aspect-ratio: 1 / 1;
-  border-radius: 28px;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.7) 0%, transparent 45%),
-    linear-gradient(155deg, var(--color-accent-soft), var(--color-primary-light));
+  aspect-ratio: 1.08 / 1;
 }
 
 .hero-slide {
@@ -469,7 +464,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7% 6% 17%;
+  padding: 0 0 12%;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px) scale(0.985);
@@ -510,27 +505,11 @@ section {
   filter: drop-shadow(0 22px 22px rgba(60, 30, 40, 0.25));
 }
 
-.hero-slide-label {
-  position: absolute;
-  left: 24px;
-  bottom: 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  font-size: var(--fs-xs);
-  color: var(--color-ink-soft);
-}
-
-.hero-slide-label strong {
-  font-family: var(--font-heading);
-  font-size: var(--fs-sm);
-  color: var(--color-ink);
-}
-
 .hero-dots {
   position: absolute;
-  right: 24px;
-  bottom: 22px;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   display: flex;
   gap: 4px;
   z-index: 2;
@@ -557,8 +536,20 @@ section {
 
 .hero-dots button.is-active::after { opacity: 1; transform: scale(1.3); }
 
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-slide.is-active .hero-shot,
+.hero-slide.is-active .hero-shot-pv {
+  animation: hero-float 6s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-slide { transition: none; transform: none; }
+  .hero-slide.is-active .hero-shot,
+  .hero-slide.is-active .hero-shot-pv { animation: none; }
 }
 
 @media (max-width: 960px) {
