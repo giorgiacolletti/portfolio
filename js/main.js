@@ -71,6 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
           currentId = section.id;
         }
       });
+      // The last section is shorter than the viewport, so its top can never reach
+      // the offset: when the page is scrolled to the bottom, it is the active one.
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      if (atBottom) currentId = spySections[spySections.length - 1].id;
       navAnchors.forEach((a) => {
         a.classList.toggle('is-active', currentId !== null && a.getAttribute('href') === `#${currentId}`);
       });
